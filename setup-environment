@@ -28,7 +28,7 @@ usage()
     echo -e "\nUsage: source $PROGNAME <build-dir>
     <build-dir>: specifies the build directory location (required)
 
-If undefined, this script will set \$MACHINE to 'imx6qsabresd'.
+If undefined, this script will set \$MACHINE to 'gizmite'.
 "
 
     ls sources/*/conf/machine/*.conf > /dev/null 2>&1
@@ -84,7 +84,7 @@ if [ "$(whoami)" = "root" ]; then
 fi
 
 if [ -z "$MACHINE" ]; then
-    MACHINE='imx6qsabresd'
+    MACHINE='gizmite'
 fi
 
 # Check the machine type specified
@@ -105,7 +105,7 @@ if [ -z "$SDKMACHINE" ]; then
 fi
 
 if [ -z "$DISTRO" ]; then
-    DISTRO='poky'
+    DISTRO='GizmiteOS'
 fi
 
 OEROOT=$PWD/sources/poky
